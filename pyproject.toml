@@ -1,3 +1,18 @@
 [build-system]
-requires = ["setuptools >= 59.0"]
+requires = ["setuptools>=65.6.0", "wheel", "setuptools_scm[toml]>=6.2"]
 build-backend = "setuptools.build_meta"
+
+[tool.uv]
+keyring-provider = "subprocess"
+
+[[tool.uv.index]]
+name = "msat-com-platform-cicd"
+url = "https://oauth2accesstoken@us-python.pkg.dev/msat-com-platform-cicd-8b41/python/simple/"
+publish-url = "https://us-python.pkg.dev/msat-com-platform-cicd-8b41/python/"
+authenticate = "always"
+
+[[tool.uv.index]]
+name = "msat-com-cicd"
+url = "https://oauth2accesstoken@us-python.pkg.dev/msat-com-cicd-312f/python/simple/"
+publish-url = "https://us-python.pkg.dev/msat-com-cicd-312f/python/"
+authenticate = "always"
